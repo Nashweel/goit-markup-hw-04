@@ -35,6 +35,14 @@ body {
 visibility: hidden;
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
 /* ----------------------------------------------- */
 
 .container {
@@ -61,7 +69,6 @@ visibility: hidden;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
 .header-logo:focus {
   color: var(--accent-color);
@@ -72,7 +79,6 @@ visibility: hidden;
 }
 
 .nav-list {
-  list-style: none;
   display: flex;
   margin-left: 93px;
 }
@@ -93,7 +99,6 @@ visibility: hidden;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 
 }
 
@@ -105,11 +110,9 @@ visibility: hidden;
 
 .nav-link.current {
   color: var(--accent-color);
-  text-decoration: none;
 }
 
 .header-contacts {
-  list-style: none;
   display: flex;
   margin-left: auto;
 }
@@ -137,6 +140,8 @@ visibility: hidden;
 .contact-link {
   display: flex;
   padding: 32px 0 32px 0;
+  align-items: center;
+
 
   color: var(--primary-text-color);
 
@@ -144,13 +149,25 @@ visibility: hidden;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
 }
+
+.contact-link:hover .contact-icon,
+.contact-link:focus .contact-icon {
+  fill: var(--accent-color);
+}
+
+
+.contact-icon {
+  fill: var(--primary-text-color);
+  display: flex;
+  margin-right: 10px;
+}
+
 
 /* --------------------Секция Hero --------------------------*/
 
@@ -214,7 +231,6 @@ padding-top: 94px;
 }
 
 .advantage-list {
-  list-style: none;
   display: flex;
 }
 
@@ -234,8 +250,8 @@ padding-top: 94px;
   display: block;
   height: 120px;
 
-border-radius: 4px;
-background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+  background-color: var(--secondary-bg-color);
 }
 
 .antenna::before {
@@ -291,7 +307,6 @@ margin-bottom: 10px;
 }
 
 .occupation-list {
-  list-style: none;
   display: flex;
 }
 
@@ -322,7 +337,6 @@ margin-bottom: 10px;
 
 .team-list {
   display: flex;
-  list-style: none;
 }
 
 .team-item {
@@ -389,6 +403,64 @@ margin-bottom: 10px;
 fill: #ffffff;
 }
 
+/* -----------------------Clients---------------------------------- */
+
+.client {
+  padding: 94px 0;
+}
+
+.client-list {
+  display: flex;
+  flex-wrap: unset;
+}
+
+.client-title {
+margin: 0 auto;
+text-align: center;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  width: 170px;
+  height: 90px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+fill: var(--accent-color);
+}
+
+.client-icon {
+  display: flex;
+  fill: #AFB1B8;
+}
+
 /* ------------------------------------------------------------------------------------------------- */
 /*------------------------ Работа со-страницей Портфолио ---------------------------------*/
 
@@ -403,7 +475,6 @@ fill: #ffffff;
   justify-content: center;
   margin-bottom: 50px;
   
-  list-style: none;
 }
 
 .filter-item.current {
@@ -453,7 +524,6 @@ fill: #ffffff;
 /* Portfolio exaples */
 
 .portfolio {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
@@ -487,7 +557,6 @@ fill: #ffffff;
 }
 
 .portfolio-link {
-  text-decoration: none;
   display: inline-block;
   border: 1px solid #EEEEEE;
 }
@@ -522,7 +591,6 @@ fill: #ffffff;
 }
 
 .footer-contact {
-  list-style: none;
   padding: 0;
 }
 
@@ -536,7 +604,6 @@ fill: #ffffff;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  text-decoration: none;
 }
 
 .footer-logo:focus {
@@ -558,7 +625,6 @@ display: inline-block;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-decoration: none;
 }
 
 .contact-adress:hover,
@@ -576,7 +642,6 @@ display: inline-block;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-decoration: none;
 }
 
 .adress-mail{
@@ -624,9 +689,6 @@ color: #FFFFFF;
 }
 
 .social-list {
-
-
-  list-style: none;
   display: flex;
   justify-content: center;
 }
