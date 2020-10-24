@@ -32,7 +32,15 @@ body {
 }
 
 .visually-hidden {
-visibility: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 .list {
@@ -166,6 +174,16 @@ visibility: hidden;
   fill: var(--primary-text-color);
   display: flex;
   margin-right: 10px;
+}
+
+.message {
+  width: 16px; 
+  height: 12px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
 }
 
 
@@ -395,6 +413,9 @@ margin-bottom: 10px;
 }
 
 .team-icon {
+width: 22px;
+height: 22px;
+
   fill: #AFB1B8;
 }
 
@@ -660,6 +681,7 @@ display: inline-block;
 }
 
 /*------------------- Social -------------------*/
+
 .main-footer {
   display: flex;
   flex-wrap: unset;
